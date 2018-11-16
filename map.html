@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+    <div id='map' style='width: 744px; height: 442px;'></div>
+    
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYW50b2luZWdhc3BhcmQiLCJhIjoiY2pvaXA2ejFzMGFpZTN3bW42ZDhpZnNreCJ9.O5Q83felEf8KsUnX95Fq3g';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v10',
+        center: [-4.4156, 48.448],
+        zoom: 1.8
+        });
+    </script>
+
+    <script>
+        map.on('load', function () {
+        // Add a layer showing the places.
+        map.addLayer({
+            "id": "places",
+            "type": "symbol",
+            "source": {
+                "type": "geojson",
+                "data": {
+                    "type": "FeatureCollection",
+                    "features": [
+                        // Aéroport
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>Aéroport Brest Bretagne</strong>",
+                                "icon": "airport"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-4.4156, 48.448]
+                            }
+                        },  
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Ivalo</h2><p>Le 9 février 2019</p><h3>Avec Salaün Holidays</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [27.538330, 68.659492]
+                            }
+                        },    
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Birmingham</h2><p>Du 28 juin au 31 août 2019</p><h3>Avec Flybe</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-1.898575, 52.489471]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Londres Southend</h2><p>&Agrave; partir du 5 avril 2019</p><h3>Avec Ryanair</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [0.71433, 51.53782]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Southampton</h2><p>Du 29 juin au 30 août 2019</p><h3>Avec Flybe</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-1.404351, 50.909698]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Southampton</h2><p>Du 29 juin au 30 août 2019</p><h3>Avec Flybe</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-1.404351, 50.909698]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Lille</h2><p>Toute l'année</p><h3>Avec HOP!</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [3.057256, 50.629250]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Caen</h2><p>Toute l'année</p><h3>Avec Chalair Aviation</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-0.35, 49.183333]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Paris CDG</h2><p>Toute l'année</p><h3>Avec Air France</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [2.5479, 49.0097]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Ouessant</h2><p>Toute l'année</p><h3>Avec Finist'Air</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-5.0862, 48.4597]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Genève</h2><p>Du 23 décembre 2018 au 6 janvier 2019<br />Du 10 février au 3 mars 2019</p><h3>Avec Air France</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [6.143158, 46.204391]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Lyon</h2><p>Toute l'année</p><h3>Avec HOP!</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [4.850000, 45.750000]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Bordeaux</h2><p>Toute l'année</p><h3>Avec Chalair</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-0.57918, 44.837789]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Toulouse</h2><p>Toute l'année</p><h3>Avec Volotea</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [1.444209, 43.604652]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Montpellier</h2><p>Toute l'année</p><h3>Avec Volotea</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [3.876716, 43.610767]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Pau</h2><p>Du 22 décembre 2018 au 5 janvier 2019<br />Du 9 février au 2 mars 2019<br />Du 6 au 27 avril 2019</p><h3>Avec HOP!</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-0.370797, 43.295101]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Marseile</h2><p>Toute l'année</p><h3>Avec Ryanair</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [5.374490, 43.295021]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Toulon</h2><p>Toute l'année</p><h3>Avec TUI Fly</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [5.928000, 43.124229]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Bastia</h2><p>Du 6 avril au 1er septembre 2019</p><h3>Avec Volotea</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [9.450770, 42.702221]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Figari</h2><p>Du 6 avril au 1er septembre 2019</p><h3>Avec Volotea</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [9.129790, 41.488250]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Barcelone</h2><p>Du 31 mars au 24 octobre 2019</p><h3>Avec Vueling</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [2.169920, 41.387920]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Fès</h2><p>Depuis le 30 octobre 2018</p><h3>Avec Ryanair</h3><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-4.965310, 34.059769]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<h2>Sal</h2><p>Le 5 janvier et le 6 avril 2019</p><p><a href='#'>En savoir plus</a></p>",
+                                "icon": "circle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-22.929711, 16.7266152]
+                            }
+                        },
+                    ]
+                }
+            },
+
+            "layout": {
+                "icon-image": "{icon}-15",
+                "icon-allow-overlap": true,
+            }
+        });
+        
+         // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function (e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+    </script>
+
+</body>
+</html>
